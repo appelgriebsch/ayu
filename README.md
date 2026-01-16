@@ -1,156 +1,118 @@
-![ayu](./images/hero.png)
+<p align="center">
+  <img src="./images/hero.png" alt="ayu theme for Sublime Text">
+</p>
 
-`ayu` is a simple theme with bright colors and comes in three versions — *dark*, *mirage* and *light* for all day long comfortable work.
+<p align="center">
+  <a href="https://ayutheme.com">Website</a> •
+  <a href="#install">Install</a> •
+  <a href="#screenshots">Screenshots</a> •
+  <a href="#ports">Ports</a>
+</p>
 
-> All screenshots use wonderful [Pragmata Pro](https://fsd.it/shop/fonts/pragmatapro/) font
+---
 
-### File Icons
+**ayu** is a bright color theme and comes in three versions — _dark_, _mirage_, and _light_ — for all-day comfortable work. Handcrafted for Sublime Text.
 
-`ayu` from version `3.0.0` supports customization via [A File Icon](https://github.com/SublimeText/AFileIcon) package. Please install it and restart Sublime for better experience.
+## Install
 
-### Custom UI fonts
+### Recommended
 
-Since verion `5.0.0` monospaced fonts options were removed. But it's still possible to use your favourite font in the
-user interface of the theme, just follow through these simple steps:
+Install via [Package Control](https://packagecontrol.io/):
 
-![ayu mono](./images/browse.png)
+1. Press <kbd>cmd/ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd> to open the command palette
+2. Type `install package` and press enter
+3. Search for `ayu` and install
 
-1. Pull up command pallete via <kbd>cmd/ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd>
-2. Type in `Browse packages`
-3. Navigate to the `/User` folder
-4. Create a file named `ayu-mirage.sublime-theme` to modify mirage or `ayu-light.sublime-theme` and `ayu-dark.sublime-theme`
-5. Open that file in Sublime
-6. Copy and paste following content:
-   ```json
-   [
-     {
-       "class": "sidebar_label",
-       "font.face": "PragmataPro Mono Liga"
-     },
-     {
-       "class": "sidebar_heading",
-       "font.face": "PragmataPro Mono Liga"
-     },
-     {
-       "class": "tab_label",
-       "font.face": "PragmataPro Mono Liga"
-     },
-     {
-       "class": "label_control",
-       "font.face": "PragmataPro Mono Liga"
-     },
-     {
-       "class": "quick_panel_label",
-       "font.face": "PragmataPro Mono Liga"
-     },
-     {
-       "class": "quick_panel_path_label",
-       "font.face": "PragmataPro Mono Liga"
-     }
-   ]
-   ```
-7. Replace `PragmataPro Mono Liga` with the font of your choice
-8. Save and enjoy :)
+### Manual
 
-### Screenshots
+1. Download the [latest release](https://github.com/ayu-theme/ayu/releases/latest)
+2. Extract and rename the directory to `ayu`
+3. Move it to your Sublime `/Packages` directory *(Preferences > Browse packages...)*
 
-<h6 align='center'>Light with <code>ui_separator</code> option on</h6>
+## Activation
+
+Open command palette via <kbd>cmd/ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd> and type `ayu: Activate theme`.
+
+Or add to your user settings *(Preferences > Settings)*:
+
+```json
+// Light
+"theme": "ayu-light.sublime-theme",
+"color_scheme": "Packages/ayu/ayu-light.sublime-color-scheme",
+
+// Mirage
+"theme": "ayu-mirage.sublime-theme",
+"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
+
+// Dark
+"theme": "ayu-dark.sublime-theme",
+"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
+```
+
+## Screenshots
+
+<h6 align="center">Light with <code>ui_separator</code> option</h6>
 
 ![Light](images/light-separator.png)
 
 ---
 
-
-<h6 align='center'>Mirage with <code>ui_separator</code> option off</h6>
+<h6 align="center">Mirage</h6>
 
 ![Mirage](images/mirage-no-separator.png)
 
 ---
 
-<h6 align='center'>Dark with <code>ui_separator</code> option on</h6>
+<h6 align="center">Dark with <code>ui_separator</code> option</h6>
 
 ![Dark](images/dark-separator.png)
 
+## Customization
+
 ### Settings
 
-```js
-"ui_native_titlebar":       true, // use native titlebars on macOs
-"ui_separator":             true, // separators between panels
-"ui_wide_scrollbars":       true, // wider scrollbars
+```json
+"ui_native_titlebar": true,   // native titlebar on macOS
+"ui_separator": true,         // separators between panels
+"ui_wide_scrollbars": true    // wider scrollbars
 ```
+
+### File Icons
+
+For file icons, install [A File Icon](https://github.com/SublimeText/AFileIcon) package.
+
+### Custom UI Fonts
+
+1. Open command palette and type `Browse packages`
+2. Navigate to `/User`
+3. Create `ayu-mirage.sublime-theme` (or `ayu-light`/`ayu-dark`)
+4. Add:
+
+```json
+[
+  { "class": "sidebar_label", "font.face": "Your Font" },
+  { "class": "sidebar_heading", "font.face": "Your Font" },
+  { "class": "tab_label", "font.face": "Your Font" },
+  { "class": "label_control", "font.face": "Your Font" },
+  { "class": "quick_panel_label", "font.face": "Your Font" },
+  { "class": "quick_panel_path_label", "font.face": "Your Font" }
+]
+```
+
+## Legacy Versions
+
+- **Sublime Text 3**: [v5.1.0](https://github.com/ayu-theme/ayu/releases/tag/v5.1.0)
+- **Sublime Text 2**: [v3.2.2](https://github.com/ayu-theme/ayu/releases/tag/3.2.2)
+
+## Ports
+
+ayu is available for:
+
+- [VS Code](https://github.com/ayu-theme/vscode-ayu)
+- [and more...](https://ayutheme.com)
 
 ---
 
-### Installation
-
-###### Recommended
-
-You can install `ayu` via [Package Control](https://packagecontrol.io/).
-
-1. Press <kbd>cmd/ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd> to open the command palette.
-2. Type `install package` and press enter. Then search for `ayu`
-
-###### Manual
-
-1. Download the [latest release](https://github.com/dempfi/ayu/releases/latest), extract and rename the directory to `ayu`.
-2. Move the directory inside your sublime `/Packages` directory. *(Preferences > Browse packages...)*
-
----
-
-### Activation
-
-###### Recommended
-
-Open command palette via `Tools > Command Palette` (or <kbd>cmd/ctrl</kbd> + <kbd>shift</kbd> + <kbd>p</kbd>) and type `ayu: Activate theme`.
-
-
-###### With Skins package
-
-[Skins](https://packagecontrol.io/packages/Skins) provides a simple and efficient way to change themes, save your own presets and quickly try out new looks. Activation is as simple as opening up the command palette, running `Select Skin` and choosing `Ayu - Dark` or `Ayu - Light` from the list.
-
-
-###### Via Preferences
-
-Add these lines to your user settings *Preferences > Setting - User*:
-
-For light theme:
-
-```js
-"theme": "ayu-light.sublime-theme",
-"color_scheme": "Packages/ayu/ayu-light.sublime-color-scheme",
-```
-
-For mirage theme:
-
-```js
-"theme": "ayu-mirage.sublime-theme",
-"color_scheme": "Packages/ayu/ayu-mirage.sublime-color-scheme",
-```
-
-For dark theme:
-
-```js
-"theme": "ayu-dark.sublime-theme",
-"color_scheme": "Packages/ayu/ayu-dark.sublime-color-scheme",
-```
-
-### Sublime Text 3
-ayu no longer supports Sublime Text 3. But you still can download
-and install manually [latest supported version](https://github.com/dempfi/ayu/releases/tag/v5.1.0).
-
-### Sublime Text 2
-
-ayu no longer supports Sublime Text 2. But you still can download
-and install manually [latest supported version](https://github.com/dempfi/ayu/releases/tag/3.2.2).
-
-### Related projects and ports
-
-- `ayu` for Ace: https://github.com/ayu-theme/ayu-ace
-- `ayu` colors as NPM package: https://github.com/ayu-theme/ayu-colors
-- `ayu` for VSCode: https://github.com/teabyii/vscode-ayu
-- `ayu` for XCode: https://github.com/vburojevic/ayu-xcode-theme
-- `ayu` for [Kakoune](https://github.com/mawww/kakoune): https://github.com/icantjuddle/ayu-kak
-
-<div align="right"><sup>
-  made with ❤️ by <a href="https://github.com/dempfi">@dempfi</a>
-</sup></div>
+<p align="center">
+  <a href="https://ayutheme.com">ayutheme.com</a>
+</p>
